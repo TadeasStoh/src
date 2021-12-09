@@ -1,4 +1,6 @@
 package com.company.view;
+import com.company.model.HracPloch;
+import com.company.model.Kostka;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
@@ -10,6 +12,8 @@ import java.awt.*;
 import java.util.Random;
 
 public class MainController {
+
+    HracPloch hraciplocha;
 
     int[][] mara = new int[][] {
             {0 , 0 , 0 , 0 , 1 , 2 , 3 , 0 , 0 , 0 , 0},
@@ -41,6 +45,7 @@ public class MainController {
     @FXML
     public void novaplocha(){
 
+        hraciplocha = new HracPloch(40, 4, 4, new Kostka(6));
 
         for (int i=0; i<11; i++){
             for(int i1=0; i1<11; i1++){
@@ -87,6 +92,10 @@ public class MainController {
         Lada.add(kostka, 5, 5);
     }
 
+    public void pohyb(int pole){
+
+    }
+
     @FXML
     public void vytvoreniPlochy(){
         Button[] policka=new Button[40];
@@ -111,4 +120,5 @@ public class MainController {
         }
         Standa.getChildren().addAll(policka);
     }
+
 }

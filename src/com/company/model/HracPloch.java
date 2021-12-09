@@ -39,6 +39,7 @@ public class HracPloch {
     public boolean jeVolno(int kde) {
         return plocha.get(kde) == null;
     }
+    public boolean jeMoje(int kde){return plocha.get(kde).getBarva()== praveHraje}
 
     public void nasaditFigurku() {
         if(jeVolno(praveHraje.getStartovniPole())) {
@@ -92,4 +93,6 @@ public class HracPloch {
         return (kam > delkaPlochy - 1) ? kam - delkaPlochy : kam;
 
     }
+
+
 }
